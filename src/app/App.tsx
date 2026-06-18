@@ -204,7 +204,7 @@ function TitleSlide() {
       {/* Team members */}
       <div className="w-full max-w-4xl">
         <div className="text-xs uppercase tracking-widest mb-4" style={{color:"#6b9bb8",fontFamily:"JetBrains Mono"}}>Presented by</div>
-        <div className="grid grid-cols-2 gap-3 mb-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
           {[
             {name:"Md Abdur Rahman",id:"2233091141",role:"Team Leader"},
             {name:"Md. Nayem Uddin",id:"2233091004",role:""},
@@ -273,7 +273,7 @@ function SwitchingSection() {
     <section className="py-16 px-10" style={{background:"#070e20"}}>
       <div className="max-w-6xl mx-auto">
         <SectionBadge num="01" title="Network Switching — নেটওয়ার্ক সুইচিং" color="#00e5ff" />
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Diagram */}
           <div className="rounded-2xl p-5" style={{
             background:"linear-gradient(135deg,#0a1628,#0d2040)",
@@ -320,7 +320,7 @@ function SwitchingSection() {
             </div>
 
             {/* Key facts */}
-            <div className="grid grid-cols-2 gap-3 mt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
               {[
                 {k:"OSI Layer",v:"Layer 2"},
                 {k:"Address",v:"MAC Address"},
@@ -356,7 +356,7 @@ function RoutingSection() {
     <section className="py-16 px-10" style={{background:"#060d1f"}}>
       <div className="max-w-6xl mx-auto">
         <SectionBadge num="02" title="Network Routing — নেটওয়ার্ক রাউটিং" color="#00b4d8" />
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Explanation */}
           <InfoBox>
             <div className="space-y-3 text-sm" style={{fontFamily:"Inter",lineHeight:1.7}}>
@@ -373,7 +373,7 @@ function RoutingSection() {
                 <p style={{color:"#c8daea"}}>Router <span style={{color:"#00b4d8",fontWeight:600}}>IP address</span> ব্যবহার করে best path নির্বাচন করে।</p>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3 mt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
               {[
                 {k:"OSI Layer",v:"Layer 3"},
                 {k:"Address",v:"IP Address"},
@@ -547,7 +547,7 @@ function PacketFlowSection() {
     <section className="py-16 px-10" style={{background:"#060d1f"}}>
       <div className="max-w-6xl mx-auto">
         <SectionBadge num="04" title="Packet Flow Visualization — প্যাকেট প্রবাহ" color="#00e5ff" />
-        <div className="grid grid-cols-5 gap-2 mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 mb-6">
           {steps.map((s,i)=>(
             <div key={i} className="rounded-xl px-3 py-2.5 text-xs text-center transition-all duration-300"
               style={{
@@ -622,7 +622,7 @@ function ConclusionSection() {
     <section className="py-16 px-10" style={{background:"#070e20"}}>
       <div className="max-w-5xl mx-auto">
         <SectionBadge num="05" title="Conclusion — উপসংহার" color="#00e5ff" />
-        <div className="grid grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           {points.map((p,i)=>(
             <div key={i} className="rounded-2xl p-6 flex flex-col gap-3 transition-transform duration-200 hover:scale-[1.02]"
               style={{
