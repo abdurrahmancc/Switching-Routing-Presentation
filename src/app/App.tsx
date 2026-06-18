@@ -201,20 +201,39 @@ function TitleSlide() {
         <div className="h-px w-32" style={{background:"linear-gradient(to left,transparent,#00b4d8)"}} />
       </div>
 
-      {/* Info cards */}
-      <div className="grid grid-cols-4 gap-4 max-w-3xl w-full">
-        {[
-          {label:"Presented by",value:"Alex Johnson"},
-          {label:"Student ID",value:"CS-2024-0042"},
-          {label:"Course",value:"CNET 301 — Networks"},
-          {label:"Section",value:"02"},
-        ].map(item => (
-          <div key={item.label} className="rounded-2xl px-4 py-4 flex flex-col items-center text-center"
-            style={{background:"rgba(0,180,216,0.07)",border:"1px solid rgba(0,180,216,0.2)"}}>
-            <div className="text-xs uppercase tracking-widest mb-1.5" style={{color:"#6b9bb8",fontFamily:"JetBrains Mono"}}>{item.label}</div>
-            <div className="font-semibold text-sm" style={{color:"#e8f4ff",fontFamily:"Inter"}}>{item.value}</div>
+      {/* Team members */}
+      <div className="w-full max-w-4xl">
+        <div className="text-xs uppercase tracking-widest mb-4" style={{color:"#6b9bb8",fontFamily:"JetBrains Mono"}}>Presented by</div>
+        <div className="grid grid-cols-2 gap-3 mb-5">
+          {[
+            {name:"Md Abdur Rahman",id:"2233091141",role:"Team Leader"},
+            {name:"Md. Nayem Uddin",id:"2233091004",role:""},
+            {name:"Md Anwar Hossain",id:"2233091123",role:""},
+            {name:"Md Habibur Rahman",id:"2233091142",role:""},
+          ].map(m=>(
+            <div key={m.id} className="flex items-center gap-3 rounded-xl px-4 py-3"
+              style={{background:"rgba(0,180,216,0.07)",border:"1px solid rgba(0,180,216,0.2)"}}>
+              <div className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold"
+                style={{background:"rgba(0,229,255,0.15)",color:"#00e5ff",border:"1px solid rgba(0,229,255,0.3)"}}>
+                {m.name.split(" ").pop()![0]}
+              </div>
+              <div className="text-left">
+                <div className="font-semibold text-sm flex items-center gap-2" style={{color:"#e8f4ff",fontFamily:"Inter"}}>
+                  {m.name}
+                  {m.role && <span className="text-xs px-1.5 py-0.5 rounded-full" style={{background:"rgba(0,229,255,0.15)",color:"#00e5ff"}}>{m.role}</span>}
+                </div>
+                <div className="text-xs" style={{color:"#6b9bb8",fontFamily:"JetBrains Mono"}}>{m.id}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <div className="h-px flex-1" style={{background:"linear-gradient(to right,transparent,rgba(0,180,216,0.3))"}} />
+          <div className="px-5 py-2 rounded-full text-sm font-semibold" style={{color:"#a8d8ea",fontFamily:"Inter",background:"rgba(0,180,216,0.07)",border:"1px solid rgba(0,180,216,0.2)"}}>
+            Department of CSE &nbsp;·&nbsp; Uttara University
           </div>
-        ))}
+          <div className="h-px flex-1" style={{background:"linear-gradient(to left,transparent,rgba(0,180,216,0.3))"}} />
+        </div>
       </div>
 
       {/* Network icons strip */}
@@ -690,20 +709,32 @@ function ThanksSection() {
         </div>
 
         {/* Presenter card */}
-        <div className="rounded-2xl px-10 py-6 mb-8"
+        <div className="rounded-2xl px-8 py-6 mb-8 w-full max-w-2xl"
           style={{background:"rgba(0,180,216,0.07)",border:"1px solid rgba(0,180,216,0.2)"}}>
-          <div className="grid grid-cols-2 gap-8">
+          <div className="text-xs uppercase tracking-widest mb-4 text-center" style={{color:"#6b9bb8",fontFamily:"JetBrains Mono"}}>Group Members</div>
+          <div className="space-y-2.5 mb-5">
             {[
-              {label:"Presented by",value:"Alex Johnson"},
-              {label:"Student ID",value:"CS-2024-0042"},
-              {label:"Course",value:"CNET 301 — Networks"},
-              {label:"Section",value:"02"},
-            ].map(item=>(
-              <div key={item.label} className="text-left">
-                <div className="text-xs uppercase tracking-widest mb-1" style={{color:"#6b9bb8",fontFamily:"JetBrains Mono"}}>{item.label}</div>
-                <div className="font-semibold" style={{color:"#e8f4ff",fontFamily:"Inter"}}>{item.value}</div>
+              {name:"Md Abdur Rahman",id:"2233091141",role:"Team Leader"},
+              {name:"Md. Nayem Uddin",id:"2233091004",role:""},
+              {name:"Md Anwar Hossain",id:"2233091123",role:""},
+              {name:"Md Habibur Rahman",id:"2233091142",role:""},
+            ].map(m=>(
+              <div key={m.id} className="flex items-center justify-between px-3 py-2 rounded-lg"
+                style={{background:"rgba(0,180,216,0.07)",border:"1px solid rgba(0,180,216,0.12)"}}>
+                <div className="flex items-center gap-2.5">
+                  <div className="w-7 h-7 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold"
+                    style={{background:"rgba(0,229,255,0.15)",color:"#00e5ff"}}>
+                    {m.name.split(" ").pop()![0]}
+                  </div>
+                  <span className="font-medium text-sm" style={{color:"#e8f4ff",fontFamily:"Inter"}}>{m.name}</span>
+                  {m.role && <span className="text-xs px-1.5 py-0.5 rounded-full" style={{background:"rgba(0,229,255,0.15)",color:"#00e5ff"}}>{m.role}</span>}
+                </div>
+                <span className="text-xs" style={{color:"#6b9bb8",fontFamily:"JetBrains Mono"}}>{m.id}</span>
               </div>
             ))}
+          </div>
+          <div className="text-center text-sm font-semibold" style={{color:"#a8d8ea",fontFamily:"Inter"}}>
+            Department of CSE &nbsp;·&nbsp; Uttara University
           </div>
         </div>
 
@@ -718,7 +749,7 @@ function ThanksSection() {
         </div>
 
         <div className="mt-10 text-xs" style={{color:"#6b9bb8",fontFamily:"JetBrains Mono"}}>
-          CNET 301 — Computer Networks · University Project · 2024
+          Department of CSE · Uttara University · 2024
         </div>
       </div>
 
