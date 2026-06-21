@@ -1,7 +1,7 @@
 
-  # University Presentation Diagram
+  # University Networking Infographic
 
-  This is a code bundle for University Presentation Diagram. The original project is available at https://www.figma.com/design/MLL3FCEWHhImrMWwMOcAWJ/University-Presentation-Diagram.
+  This is a code bundle for University Networking Infographic. The original project is available at https://www.figma.com/design/S26HiP0eLzwqUyZIYSg8tf/University-Networking-Infographic.
 
   ## Running the code
 
